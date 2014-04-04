@@ -13,6 +13,7 @@ Puppet manifest to create lvm physical devices, volume groups and logical volume
 
 ##Example:
 
+```puppet
     lvm::pvcreate{'sda2':
       block_device => '/dev/sda2'
     }
@@ -27,6 +28,7 @@ Puppet manifest to create lvm physical devices, volume groups and logical volume
       volume_group => 'vg_0';
       require      => Lvm::Vgcreate['/dev/vg_0']
     }
+```
 
 ##Authors:
 
